@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue';
 
 const props = defineProps({    
     from: {type: Number, default: 1},
-    to: {type: Number, default: 2},        
+    to: {type: Number, default: 1.5},        
     color: {type: String, default: "#ffc006"},        
   });
 

@@ -8,6 +8,7 @@
   import '../aframe/tiling-square.js';
   import '../aframe/simple-grab.js';
   import '../aframe/clickable.js';
+  import '../aframe/emit-when-near.js';
 
   const allAssetsLoaded = ref(false);
 </script>
