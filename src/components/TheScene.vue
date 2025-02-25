@@ -9,6 +9,7 @@
   import '../aframe/simple-grab.js';
   import '../aframe/clickable.js';
   import '../aframe/emit-when-near.js';
+  import '../aframe/listen-to.js';
 
   const allAssetsLoaded = ref(false);
 </script>
@@ -76,6 +77,7 @@
         License : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
       -->
       <a-asset-item id="candle" src="./assets/models/candle.glb"></a-asset-item>
+      <a-asset-item id="purple-candle" src="./assets/models/candle_purple.glb"></a-asset-item>
       <!--
         Title : Kickelhahn Tower
         Source : https://sketchfab.com/3d-models/kickelhahn-tower-weyeuTkdMADFF53EZq4U38mmx3P
