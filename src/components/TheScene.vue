@@ -10,6 +10,7 @@
   import '../aframe/clickable.js';
   import '../aframe/emit-when-near.js';
   import '../aframe/listen-to.js';
+  import '../aframe/outline.js';
 
   const allAssetsLoaded = ref(false);
 </script>
@@ -19,6 +20,7 @@
     stats
     background="color: #030303;"
     simple-grab
+    outline
   >
 
     <a-assets @loaded="allAssetsLoaded = true">
@@ -140,7 +142,7 @@
           <a-gltf-model src="#portal"></a-gltf-model>
           <a-entity id="magic&light" visible="false">
             <a-gltf-model src="#portal-magic"></a-gltf-model>
-            <a-light type="point" intensity="2" position="-13.61 6.79 4.16" ></a-light>
+            <a-light type="point" intensity="1" position="-13.61 6.79 4.370" ></a-light>
           </a-entity>
           <!-- <note>The portal is not to be lit when not in use. 
             The stairs to the top of the portal tower are to be 

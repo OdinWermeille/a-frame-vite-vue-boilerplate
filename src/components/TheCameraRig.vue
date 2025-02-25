@@ -42,6 +42,7 @@
         id="hand-left"
         hand-controls="hand: left"
         blink-controls="
+          enable: false;
           cameraRig: #camera-rig;
           teleportOrigin: #head;
           collisionEntities: [data-role='nav-mesh'];

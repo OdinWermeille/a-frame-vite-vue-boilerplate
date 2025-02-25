@@ -67,6 +67,7 @@ if (typeof AFRAME === 'undefined') {
 
 AFRAME.registerComponent('blink-controls', {
   schema: {
+    enable: { default: true },
     // Button is a simplified startEvents & endEvents specification, e.g.
     // 'thumbstick' binds 'thumbstickdown' and 'thumbstickup' respectively
     button: { default: '', oneOf: ['trackpad', 'trigger', 'grip', 'menu', 'thumbstick'] },
@@ -431,8 +432,8 @@ AFRAME.registerComponent('blink-controls', {
   },
 
   onButtonDown: function () {
-    this.active = true
-    this.redrawLine = true
+    this.active = this.data.enable;
+    this.redrawLine = this.data.enable;
   },
 
   /**
