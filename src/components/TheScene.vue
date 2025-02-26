@@ -147,6 +147,43 @@
         <a-light type="ambient" color="#40406f" intensity="0.65"></a-light>
         <TheCell></TheCell>
       </a-entity>
+      
+
+      <a-entity
+        geometry="primitive: plane; height: 10; width: 17"
+        position="0 0.14 -17"
+        rotation="-90 0 0"
+        data-role="nav-mesh"
+        material="color: green"
+        visible="true"
+      ></a-entity>
+
+      <a-entity
+        geometry="primitive: plane; height: 9; width: 21"
+        position="0 0.14 -5.9"
+        rotation="-90 0 0"
+        data-role="nav-mesh"
+        material="color: green"
+        visible="true"
+      ></a-entity>
+
+      <a-entity
+        geometry="primitive: plane; height: 10; width: 8.5"
+        position="6.25 0.14 -15"
+        rotation="-90 0 0"
+        data-role="nav-mesh"
+        material="color: green"
+        visible="true"
+      ></a-entity>
+      
+      <a-entity
+        geometry="primitive: plane; height: 10; width: 8.5"
+        position="-6.25 0.14 -15"
+        rotation="-90 0 0"
+        data-role="nav-mesh"
+        material="color: green"
+        visible="true"
+      ></a-entity>
     </template>
 
     <TheCameraRig/>

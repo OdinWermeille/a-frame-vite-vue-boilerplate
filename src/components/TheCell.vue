@@ -77,35 +77,44 @@ function manageStopRead() {
         id="note1" 
         emit-when-near="target : #candlelight; distance : 0.88; event : readnote1; eventFar : stopreadnote1">
       </a-plane>
-      <a-text id="text-full" color="#21213d" position="-0.24 0 0" scale="0.2 0.4 1" value="It's been two weeks.
-      I don't know how to get out. 
-      The only way seems to be 
-      that teleportation portal."></a-text>
-      <a-text id="text-holes" color="#21213d" position="-0.24 0 0" scale="0.2 0.4 1" visible="false"
-      value="It's been two weeks.
-      I don't know how to get       . 
-      The only way seems to be 
-      that               ation portal."></a-text>
-      <VibratingText 
-        id="text-teleport"
-        from="-0.1475 -0.14 0"
-        to="-0.1525 -0.14 0"
-        color="#21213d" 
-        position="-0.15 -0.14 0" 
-        scale="0.2 0.4 1" 
-        visible="false" 
-        value="teleport">
-      </VibratingText>
-      <VibratingText 
-        id="text-out"
-        from="0.2225 0.05 0"
-        to="0.2175 0.05 0"
-        color="#21213d" 
-        position="0.22 0.05 0" 
-        scale="0.2 0.4 1" 
-        visible="false" 
-        value="out">
-      </VibratingText>
+      <a-entity position="-0.24 0 0" scale="0.2 0.4 1">
+        <a-text id="text-full" color="#21213d" value="It's been two weeks.
+        I don't know how to get out. 
+        The only way seems to be 
+        that teleportation portal."></a-text>
+        <a-text id="text-holes" color="#21213d" visible="false"
+        value="It's been two weeks.
+        I don't know how to get       . 
+        The only way seems to be 
+        that               ation portal."></a-text>
+        <VibratingText 
+          id="text-teleport"
+          from="0.475 -0.34 0"
+          to="0.425 -0.34 0"
+          color="#21213d" 
+          position="0.45 -0.34 0"
+          visible="false" 
+          value="teleport">
+        </VibratingText>
+        <VibratingText 
+          id="text-out"
+          from="2.335 0.12 0"
+          to="2.285 0.12 0"
+          color="#21213d" 
+          position="2.31 0.12 0"
+          visible="false" 
+          value="out">
+        </VibratingText>
+      </a-entity>
     </a-entity>
   </a-entity>
+  
+  <a-entity
+      geometry="primitive: plane; height: 1.8; width: 0.7"
+      position="0 0.070 25.9"
+      rotation="-90 0 0"
+      data-role="nav-mesh"
+      material="color: green"
+      visible="true"
+  ></a-entity>
 </template>

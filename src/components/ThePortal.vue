@@ -17,7 +17,7 @@ function manageRead() {
     candleLight.setAttribute('color', '#cf00cf');
     textFront.setAttribute('visible', true);
     const leftHand = document.querySelector('#hand-left');
-    //change blink-controls functionnality to allow for teleportation on top of the tower  
+    leftHand.setAttribute('blink-controls', 'curveShootingSpeed', 20); 
     hasRead = true;
   }
   , 9000);
@@ -56,13 +56,13 @@ function manageStopRead() {
 </script>
 
 <template>
-  <a-entity rotation="0 -90 0" position="0.9 -0.150 17" scale="0.2 0.2 0.2">
+  <a-entity rotation="0 -90 0" position="0.85 -0.150 17" scale="0.2 0.2 0.2">
     <a-gltf-model src="#portal"></a-gltf-model>
     <a-entity id="magic&light" visible="false">
       <a-gltf-model src="#portal-magic"></a-gltf-model>
       <a-light type="point" intensity="1" position="-13.61 6.79 4.370" ></a-light>
     </a-entity>
-    <a-entity position="-13.65 4.5 12.735" rotation="0.200 0.100 0">
+    <a-entity position="-13.72 6.993 12.745" rotation="-0.03 0 0">
       <a-plane 
         id="note2" 
         height="2"
@@ -103,4 +103,13 @@ function manageStopRead() {
       </a-entity>
     </a-entity>
   </a-entity>
+
+  <a-entity
+      geometry="primitive: plane; height: 1.6; width: 2"
+      position="0 0.04 14.3"
+      rotation="-90 0 0"
+      data-role="nav-mesh"
+      material="color: green"
+      visible="true"
+  ></a-entity>
 </template>
