@@ -12,7 +12,7 @@ function manageRead() {
     const cellCandle = document.querySelector('#cell-candle');
     const purpleCellCandle = document.querySelector('#purple-cell-candle');
     const candleLight = document.querySelector('#candlelight');
-    const textFront = document.querySelector('#text-front');
+    const textFront = document.querySelector('#text-front1');
     cellCandle.setAttribute('visible', false);
     purpleCellCandle.setAttribute('visible', true);
     candleLight.setAttribute('color', '#cf00cf');
@@ -35,11 +35,10 @@ function manageRead() {
 }
 
 function manageStopRead() {
-  console.log('stop reading');
   const cellCandle = document.querySelector('#cell-candle');
   const purpleCellCandle = document.querySelector('#purple-cell-candle');
   const candleLight = document.querySelector('#candlelight');
-  const textFront = document.querySelector('#text-front');
+  const textFront = document.querySelector('#text-front1');
   cellCandle.setAttribute('visible', true);
   purpleCellCandle.setAttribute('visible', false);
   candleLight.setAttribute('color', '#ffc006');
