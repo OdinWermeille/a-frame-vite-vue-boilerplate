@@ -140,9 +140,17 @@
             <a-gltf-model src="#portal-magic"></a-gltf-model>
             <a-light type="point" intensity="2" position="-13.61 6.79 4.16" ></a-light>
           </a-entity>
-          <!-- <note>The portal is not to be lit when not in use. 
+          <a-entity position="-13.65 4.5 12.735" rotation="0.200 0.100 0">
+            <a-plane 
+              id="note2" 
+              height="2"
+              width="2"
+              emit-when-near="target : #candlelight; distance : 0.88; event : readnote2; eventFar : stopreadnote2">
+            </a-plane>
+            <a-text id="text-note2" color="#21213d" position="-0.94 0 0" scale="0.4 0.4 1" value="The portal is not to be lit when not in use. 
             The stairs to the top of the portal tower are to be 
-            manned to prevent escape by teleportation.</note> -->
+            manned to prevent escape by teleportation."></a-text>
+          </a-entity>
         </a-entity>
         <a-gltf-model src="#moon" scale="50 50 50" position="-1000 1000 -1000" rotation="30 40 20"></a-gltf-model>
         <a-light type="spot" position="-800 800 -800" target="#directionaltarget" intensity="400">
