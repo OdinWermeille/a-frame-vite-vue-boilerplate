@@ -19,6 +19,14 @@
         camera
         position="0 1.65 0"
       >
+        <a-text id="text-front" position="0 0 -0.4" scale="0.6 0.6 0.6" align="center" visible="false"
+        value="OUT
+        TELEPORT
+        OUT 
+        TELEPORT
+        OUT" >
+
+        </a-text>
         <a-entity
           geometry="primitive: circle; radius: 0.0003;"
           material="shader: flat; color: white;"

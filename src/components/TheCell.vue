@@ -12,14 +12,26 @@ function manageRead() {
     const cellCandle = document.querySelector('#cell-candle');
     const purpleCellCandle = document.querySelector('#purple-cell-candle');
     const candleLight = document.querySelector('#candlelight');
+    const textFront = document.querySelector('#text-front');
     cellCandle.setAttribute('visible', false);
     purpleCellCandle.setAttribute('visible', true);
     candleLight.setAttribute('color', '#cf00cf');
+    textFront.setAttribute('visible', true);
     const leftHand = document.querySelector('#hand-left');
     leftHand.setAttribute('blink-controls', 'enable', true);  
     hasRead = true;
   }
   , 7000);
+  setTimeout(function() {
+    const textFull = document.querySelector('#text-full');
+    const textHoles = document.querySelector('#text-holes');
+    const teleport = document.querySelector('#text-teleport');
+    const out = document.querySelector('#text-out');
+    textFull.setAttribute('visible', false);
+    textHoles.setAttribute('visible', true);
+    teleport.setAttribute('visible', true);
+    out.setAttribute('visible', true);
+  }, 3000);
 }
 
 function manageStopRead() {
@@ -27,9 +39,19 @@ function manageStopRead() {
   const cellCandle = document.querySelector('#cell-candle');
   const purpleCellCandle = document.querySelector('#purple-cell-candle');
   const candleLight = document.querySelector('#candlelight');
+  const textFront = document.querySelector('#text-front');
   cellCandle.setAttribute('visible', true);
   purpleCellCandle.setAttribute('visible', false);
   candleLight.setAttribute('color', '#ffc006');
+  textFront.setAttribute('visible', false);
+  const textFull = document.querySelector('#text-full');
+  const textHoles = document.querySelector('#text-holes');
+  const teleport = document.querySelector('#text-teleport');
+  const out = document.querySelector('#text-out');
+  textFull.setAttribute('visible', true);
+  textHoles.setAttribute('visible', false);
+  teleport.setAttribute('visible', false);
+  out.setAttribute('visible', false);
   clearTimeout(currentTimeout);
 }
 
@@ -52,23 +74,23 @@ function manageStopRead() {
       <BaseCandleLight id="candlelight" from="0.05" to="0.1" position="0.007 0.218 0"></BaseCandleLight>
     </a-entity>
     <a-entity rotation="-90 0 -90" scale="0.8 0.4 1" position="0.9 0.467 26">
-      <!--when light level on a-plane above threshold, trigger an event-->
       <a-plane 
         id="note1" 
-        emit-when-near="target : #candlelight; distance : 0.85; event : readnote1; eventFar : stopreadnote1">
+        emit-when-near="target : #candlelight; distance : 0.88; event : readnote1; eventFar : stopreadnote1">
       </a-plane>
       <a-text id="text-full" color="#21213d" position="-0.24 0 0" scale="0.2 0.4 1" value="It's been two weeks.
       I don't know how to get out. 
       The only way seems to be 
       that teleportation portal."></a-text>
-      <a-text id="text_holes" color="#21213d" position="-0.24 0 0" scale="0.2 0.4 1" visible="false"
+      <a-text id="text-holes" color="#21213d" position="-0.24 0 0" scale="0.2 0.4 1" visible="false"
       value="It's been two weeks.
-      I don't know how to get    . 
+      I don't know how to get       . 
       The only way seems to be 
       that               ation portal."></a-text>
       <VibratingText 
-        from="-0.145 -0.14 0"
-        to="-0.155 -0.14 0"
+        id="text-teleport"
+        from="-0.1475 -0.14 0"
+        to="-0.1525 -0.14 0"
         color="#21213d" 
         position="-0.15 -0.14 0" 
         scale="0.2 0.4 1" 
@@ -76,8 +98,9 @@ function manageStopRead() {
         value="teleport">
       </VibratingText>
       <VibratingText 
-        from="0.225 0.05 0"
-        to="0.215 0.05 0"
+        id="text-out"
+        from="0.2225 0.05 0"
+        to="0.2175 0.05 0"
         color="#21213d" 
         position="0.22 0.05 0" 
         scale="0.2 0.4 1" 

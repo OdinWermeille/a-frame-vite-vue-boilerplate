@@ -21,7 +21,7 @@ onMounted(() => {
         ref="text"
         :value="textContent"
         :position="from"
-        :animation__start="`property: position; to: ${from}; startEvents: animationcomplete__next`"
-        :animation__next="`property: position; to: ${to}; startEvents: animationcomplete__start`"
+        :animation__start="`property: position; to: ${from}; startEvents: animationcomplete__next; dur: 50`"
+        :animation__next="`property: position; to: ${to}; startEvents: animationcomplete__start; dur: 50`"
     ></a-text>
 </template>
