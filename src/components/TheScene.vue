@@ -3,6 +3,7 @@
 
   import TheCameraRig from './TheCameraRig.vue';
   import TheCell from './TheCell.vue';
+  import ThePortal from './ThePortal.vue';
   import BaseCandleLight from './BaseCandleLight.vue';
 
   import '../aframe/tiling-square.js';
@@ -138,16 +139,7 @@
           <BaseCandleLight position="12.184 3.739 1.424"></BaseCandleLight>
           <BaseCandleLight position="9.884 3.739 1.424"></BaseCandleLight>
         </a-entity>
-        <a-entity rotation="0 -90 0" position="0.9 -0.150 17" scale="0.2 0.2 0.2">
-          <a-gltf-model src="#portal"></a-gltf-model>
-          <a-entity id="magic&light" visible="false">
-            <a-gltf-model src="#portal-magic"></a-gltf-model>
-            <a-light type="point" intensity="1" position="-13.61 6.79 4.370" ></a-light>
-          </a-entity>
-          <!-- <note>The portal is not to be lit when not in use. 
-            The stairs to the top of the portal tower are to be 
-            manned to prevent escape by teleportation.</note> -->
-        </a-entity>
+        <ThePortal></ThePortal>
         <a-gltf-model src="#moon" scale="50 50 50" position="-1000 1000 -1000" rotation="30 40 20"></a-gltf-model>
         <a-light type="spot" position="-800 800 -800" target="#directionaltarget" intensity="400">
           <a-entity id="directionaltarget" position="-10000 30000 -1000"></a-entity>
