@@ -4,7 +4,7 @@
   import TheCameraRig from './TheCameraRig.vue';
   import TheCell from './TheCell.vue';
   import ThePortal from './ThePortal.vue';
-  import BaseCandleLight from './BaseCandleLight.vue';
+  import ThePortalTower from './ThePortalTower.vue';
 
   import '../aframe/tiling-square.js';
   import '../aframe/simple-grab.js';
@@ -133,11 +133,7 @@
           <a-gltf-model src="#ground" scale="0.01 0.01 0.01" position="0.520 0 26.395"></a-gltf-model>
           <a-gltf-model src="#ground" scale="0.01 0.01 0.01" position="9.520 0.001 26.395"></a-gltf-model>
           <a-gltf-model src="#tower" scale="0.6 0.6 0.6" rotation="0 75 0" position="-11.374 -0.639 3.163"></a-gltf-model>
-          <a-gltf-model src="#tower" scale="0.6 0.6 0.6" rotation="0 -15 0" position="10.496 -0.639 2.4"></a-gltf-model>
-          <BaseCandleLight position="10.026 3.739 3.654"></BaseCandleLight>
-          <BaseCandleLight position="12.184 3.739 3.654"></BaseCandleLight>
-          <BaseCandleLight position="12.184 3.739 1.424"></BaseCandleLight>
-          <BaseCandleLight position="9.884 3.739 1.424"></BaseCandleLight>
+          <ThePortalTower></ThePortalTower>
         </a-entity>
         <ThePortal></ThePortal>
         <a-gltf-model src="#moon" scale="50 50 50" position="-1000 1000 -1000" rotation="30 40 20"></a-gltf-model>

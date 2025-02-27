@@ -18,6 +18,8 @@
         look-controls="pointerLockEnabled: true"
         camera
         position="0 1.65 0"
+        simple-navmesh-constraint="navmesh: [data-role='nav-mesh']; height: 1.65;"
+        disable-in-vr="component: simple-navmesh-constraint;"
       >
         <a-text id="text-front1" position="0 0 -0.4" scale="0.6 0.6 0.6" align="center" visible="false"
         value="OUT

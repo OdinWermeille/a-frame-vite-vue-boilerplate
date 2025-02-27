@@ -108,7 +108,7 @@ function manageStopRead() {
       </a-entity>
     </a-entity>
   </a-entity>
-  
+
   <a-entity
       geometry="primitive: plane; height: 1.8; width: 0.7"
       position="0 0.070 25.9"
