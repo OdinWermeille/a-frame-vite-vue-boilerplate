@@ -11,8 +11,8 @@
         <BaseCandleLight position="9.884 3.739 1.424"></BaseCandleLight>
     </a-entity>
     <a-entity
-      geometry="primitive: circle; radius: 1.2"
-      position="11.15 14.2 2.5"
+      geometry="primitive: circle; radius: 0.9"
+      position="11.5 13.63 2.8"
       rotation="-90 0 0"
       data-role="nav-mesh"
       material="color: green"
