@@ -84,6 +84,14 @@
         Additionnal Info : NoAI: This model may not be used in datasets for, in the development of, or as inputs to generative AI programs.
       -->
       <a-asset-item id="tower" src="./assets/models/tower.glb"></a-asset-item>
+      <!--
+        Title : Lever
+        Source : https://sketchfab.com/3d-models/lever-711403ceebb94b77a6eca5c0e631d3b6
+        Author : https://sketchfab.com/cmyer29 (cmyer29 )
+        License : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+      -->
+      <a-asset-item id="lever-base" src="./assets/models/lever_base_dark.glb"></a-asset-item>
+      <a-asset-item id="lever-arm" src="./assets/models/lever_arm_dark.glb"></a-asset-item>
     </a-assets>
 
     
@@ -133,6 +141,8 @@
           <BaseCandleLight position="12.184 3.739 3.654"></BaseCandleLight>
           <BaseCandleLight position="12.184 3.739 1.424"></BaseCandleLight>
           <BaseCandleLight position="9.884 3.739 1.424"></BaseCandleLight>
+          <a-gltf-model src="#lever-base" scale="0.5 0.5 0.5" rotation="0 -43.3 0" position="10.52 13.351 2.08"></a-gltf-model>
+          <a-gltf-model src="#lever-arm" scale="0.5 0.5 0.5" rotation="-60 -43.3 0" position="10.6 13.851 2.08"></a-gltf-model>
         </a-entity>
         <a-entity rotation="0 -90 0" position="0.9 -0.150 17" scale="0.2 0.2 0.2">
           <a-gltf-model src="#portal"></a-gltf-model>
@@ -157,6 +167,7 @@
           <a-entity id="directionaltarget" position="-10000 30000 -1000"></a-entity>
         </a-light>
         <a-light type="ambient" color="#40406f" intensity="0.65"></a-light>
+        <a-light type="ambient" color="#ffffff" intensity="2"></a-light>
         <TheCell></TheCell>
       </a-entity>
     </template>
