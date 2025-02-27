@@ -89,6 +89,14 @@
         Additionnal Info : NoAI: This model may not be used in datasets for, in the development of, or as inputs to generative AI programs.
       -->
       <a-asset-item id="tower" src="./assets/models/tower.glb"></a-asset-item>
+      <!--
+        Title : Lever
+        Source : https://sketchfab.com/3d-models/lever-711403ceebb94b77a6eca5c0e631d3b6
+        Author : https://sketchfab.com/cmyer29 (cmyer29 )
+        License : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+      -->
+      <a-asset-item id="lever-base" src="./assets/models/lever_base_dark.glb"></a-asset-item>
+      <a-asset-item id="lever-arm" src="./assets/models/lever_arm_dark.glb"></a-asset-item>
     </a-assets>
 
     
