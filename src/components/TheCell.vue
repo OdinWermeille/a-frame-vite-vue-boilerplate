@@ -69,7 +69,7 @@ function manageStopRead() {
       @stopreadnote1="manageStopRead"
       simple-grab>
       <a-gltf-model id="purple-cell-candle" src="#purple-candle" scale="25 25 25" visible="false"></a-gltf-model>
-      <a-gltf-model id="cell-candle" src="#candle" scale="25 25 25" clickable outline-on-event></a-gltf-model>
+      <a-gltf-model id="cell-candle" src="#candle" scale="25 25 25" clickable outline-on-event @click="$event.target.removeAttribute('clickable')"></a-gltf-model>
       <BaseCandleLight id="candlelight" :from="0.05" :to="0.1" position="0.007 0.218 0"></BaseCandleLight>
     </a-entity>
     <a-entity rotation="-90 0 -90" scale="0.8 0.4 1" position="0.9 0.467 26">
