@@ -16,6 +16,17 @@
   import '../aframe/outline.js';
 
   const allAssetsLoaded = ref(false);
+
+  const startIntro = () => {
+    setTimeout(() => {
+      document.getElementById('intro-text').setAttribute('visible', false);
+      document.getElementById('intro-text-2').setAttribute('visible', true);
+      setTimeout(() => {
+        document.getElementById('intro').setAttribute('visible', false);
+      }, 3000);
+    }, 3000);
+  };
+
 </script>
 
 <template>
@@ -24,10 +35,10 @@
     :background="backgroundColor"
     simple-grab
     outline
+    @enter-scene="startIntro"
   >
 
     <a-assets @loaded="allAssetsLoaded = true">
-      <a-asset-item id="teleport-sound" response-type="arraybuffer" src="assets/teleport-sound.mp3" preload="auto"></a-asset-item>
       <!--
         Title : Magic Portal
         Source : https://sketchfab.com/3d-models/magic-portal-88a7c64fa3d3431b8cd22e8fedc71e78
@@ -100,13 +111,14 @@
       -->
       <a-asset-item id="lever-base" src="./assets/models/lever_base_dark.glb"></a-asset-item>
       <a-asset-item id="lever-arm" src="./assets/models/lever_arm_dark.glb"></a-asset-item>
+      <a-asset-item id="teleport-sound" response-type="arraybuffer" src="assets/teleport-sound.mp3" preload="auto"></a-asset-item>
     </a-assets>
 
     
     <!-- <a-entity tiling-square="width: 30; depth: 30"></a-entity> -->
 
     <template v-if="allAssetsLoaded">
-      <a-entity position="0 0.1 -25.5" scale="1 1.1 1">
+      <a-entity position="0 0 -25.5" scale="1 1.1 1">
         <a-entity scale="1 0.9 1">  
           <a-gltf-model src="#iron-gate" scale="0.5 0.5 0.5" position="0 -0.1 -0.01"></a-gltf-model>
           <a-gltf-model src="#iron-gate" scale="0.5 0.5 0.5" position="0 -0.1 2.4"></a-gltf-model>

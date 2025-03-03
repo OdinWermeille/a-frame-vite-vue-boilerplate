@@ -1,11 +1,18 @@
 <script setup>
-  import { ref } from 'vue';
+  import { ref, watchEffect } from 'vue';
 
-  defineProps({
+  const props = defineProps({
     loaded: Boolean,
   });
 
   const showOnboarding = ref(true);
+
+  const showBtn = ref(false);
+
+  watchEffect(() => {
+    if (!props.loaded) return;
+    setTimeout(() => {showBtn.value = true}, 4000);
+  });
 
   function enterScene() {
     showOnboarding.value = false;
@@ -13,19 +20,7 @@
       document.querySelector('a-scene').enterVR();
     }
     document.querySelector('a-scene').emit('enter-scene');
-    //as the intro is part of the scene, I opted to start it here
-    startIntro();
   }
-
-  const startIntro = () => {
-    setTimeout(() => {
-      document.getElementById('intro-text').setAttribute('visible', false);
-      document.getElementById('intro-text-2').setAttribute('visible', true);
-      setTimeout(() => {
-        document.getElementById('intro').setAttribute('visible', false);
-      }, 3000);
-    }, 3000);
-  };
 
 </script>
 
@@ -33,8 +28,8 @@
   <div id="onboarding" v-if="showOnboarding">
     <div>
       <h1>Amnesiac Wizard</h1>
-      <p v-if="!loaded">loading...</p>
-      <button v-if="loaded" @click="enterScene()">Enter scene</button>
+      <p v-if="!showBtn">loading...</p>
+      <button v-if="showBtn" @click="enterScene()">Enter scene</button>
       <div class="licences">
         <section>
           <h4>Movement modes support</h4>

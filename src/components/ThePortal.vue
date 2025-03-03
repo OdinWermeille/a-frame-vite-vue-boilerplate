@@ -72,7 +72,7 @@ const handleEndGame = () => {
   document.querySelector('#moonlight').setAttribute('visible', false);
   document.querySelector('#ambiant-blue').setAttribute('visible', false);
   document.querySelector('#sunlight').setAttribute('visible', true);
-  backgroundColor.value = 'color : #f0f0c0';
+  backgroundColor.value = 'color : #c0c0a0';
   gameEnded.value = true;
 }
 

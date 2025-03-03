@@ -32,22 +32,22 @@
         <a-text id="text-front2" position="0 0 -0.4" scale="0.2 0.2 0.2" align="center" visible="false"
         value="PORTAL
         UP" ></a-text>
-        <a-text id="text-end" position="0 0 -0.4" scale="0.2 0.2 0.2" align="center" visible="false"
+        <a-text id="text-end" position="0 0 -0.4" scale="0.2 0.2 0.2" align="center" visible="false" color="#a0a0ff"
         value="You have
         escaped,
         well done !" ></a-text>
-        <a-text id="text-end-2" position="0 0 -0.4" scale="0.2 0.2 0.2" align="center" visible="false"
+        <a-text id="text-end-2" position="0 0 -0.4" scale="0.2 0.2 0.2" align="center" visible="false" color="#a0a0ff"
         value="You may now
         explore
         outside
         the walls" ></a-text>
         <a-entity id="intro" position="0 0 -0.2">
-          <a-plane color="#000000" position="0 0 -0.1"></a-plane>
-          <a-text scale="0.2 0.2 0.2" id="intro-text" align="center"
+          <a-plane color="#000000" position="0 0 -0.01"></a-plane>
+          <a-text scale="0.1 0.1 0.1" id="intro-text" align="center"
           value="You are an 
           amnesiac 
           wizard."></a-text>
-          <a-text scale="0.2 0.2 0.2" id="intro-text-2" align="center" visible="false"
+          <a-text scale="0.1 0.1 0.1" id="intro-text-2" align="center" visible="false"
           value="Try to
           remember
           your spells."></a-text>
