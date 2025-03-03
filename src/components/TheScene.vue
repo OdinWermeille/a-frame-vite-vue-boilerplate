@@ -31,7 +31,6 @@
 
 <template>
   <a-scene
-    stats
     :background="backgroundColor"
     simple-grab
     outline
