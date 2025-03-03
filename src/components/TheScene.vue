@@ -21,6 +21,7 @@
   >
 
     <a-assets @loaded="allAssetsLoaded = true">
+      <a-asset-item id="teleport-sound" response-type="arraybuffer" src="assets/teleport-sound.mp3" preload="auto"></a-asset-item>
       <!--
         Title : Magic Portal
         Source : https://sketchfab.com/3d-models/magic-portal-88a7c64fa3d3431b8cd22e8fedc71e78
@@ -167,12 +168,14 @@
           <a-entity id="directionaltarget" position="-10000 30000 -1000"></a-entity>
         </a-light>
         <a-light type="ambient" color="#40406f" intensity="0.65"></a-light>
-        <a-light type="ambient" color="#ffffff" intensity="2"></a-light>
+        <a-light id="sunlight" type="ambient" color="#ffffff" intensity="2" visible="false"></a-light>
         <TheCell></TheCell>
       </a-entity>
+      <a-entity id="teleport-sound-el" sound="src: #teleport-sound; on: play-sound; rolloffFactor: 0; volume: 0.8"></a-entity>
     </template>
 
     <TheCameraRig/>
+
 
   </a-scene>
 </template>
