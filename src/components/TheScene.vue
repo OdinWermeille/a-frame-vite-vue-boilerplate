@@ -94,7 +94,7 @@
       <!--
         Title : Lever
         Source : https://sketchfab.com/3d-models/lever-711403ceebb94b77a6eca5c0e631d3b6
-        Author : https://sketchfab.com/cmyer29 (cmyer29 )
+        Author : https://sketchfab.com/cmyer29 (cmyer29)
         License : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
       -->
       <a-asset-item id="lever-base" src="./assets/models/lever_base_dark.glb"></a-asset-item>

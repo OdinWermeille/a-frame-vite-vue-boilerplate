@@ -30,9 +30,14 @@
 
 ### 3D models
 
-- **Main room** – [VR Gallery](https://sketchfab.com/3d-models/vr-gallery-1ac32ed62fdf424498acc146fad31f7e) by [Maxim Mavrichev](https://sketchfab.com/mvrc.art) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- **3D physic room** – [3d_gallery_for_vr_projects](https://sketchfab.com/3d-models/3d-gallery-for-vr-projects-68f77ed8558c4bd59e0a13e2cc9d1fd1) by [tekuto1s](https://sketchfab.com/tekuto1s) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
+- **Portal** – [Magic Portal](https://sketchfab.com/3d-models/magic-portal-88a7c64fa3d3431b8cd22e8fedc71e78) by [Valerii_Melnychenko](https://sketchfab.com/Valerii_Melnychenko) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- **Iron Gate** – [Iron Gate](https://sketchfab.com/3d-models/iron-gate-eefe5c295e8342e088e27735dc5c9f71) by [YG3D](https://sketchfab.com/YGMax) is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+- **Walls and ground** – [Wall with Gates](https://sketchfab.com/3d-models/wall-with-gates-e87f42b2534d4e53967a7da22c9fcf58) by [Gunnar Correa](https://sketchfab.com/gunnarcorrea) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- **Cell** – [jail (Cell)](https://sketchfab.com/3d-models/jail-cell-ddc41a6835374fd7aa4574e93e0590ca) by [Pieter Ferreira](https://sketchfab.com/Badboy17Aiden) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) the author asks this model not to be used in datasets for, in the development of, or as inputs to generative AI programs.
+- **Moon** – [PS1 style low poly Moon](https://sketchfab.com/3d-models/ps1-style-low-poly-moon-a0800eda5580488092cbb48c415180a9) by [albert_buscio](https://sketchfab.com/albert_buscio) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- **Candle** – [Low-poly Gravity Falls themed candle](https://sketchfab.com/3d-models/low-poly-gravity-falls-themed-candle-b56cc6ebea1441f0aab1c1cc36299ecc) by [Kanna-Nakajima](https://sketchfab.com/Kanna-nakajima) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- **Towers** – [Kickelhahn Tower](https://sketchfab.com/3d-models/kickelhahn-tower-weyeuTkdMADFF53EZq4U38mmx3P) by [3DHaupt](https://sketchfab.com/dennish2010) is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) the author asks this model not to be used in datasets for, in the development of, or as inputs to generative AI programs.
+- **Lever** – [Lever](https://sketchfab.com/3d-models/lever-711403ceebb94b77a6eca5c0e631d3b6) by [cmyer29](https://sketchfab.com/cmyer29) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 ---
 
 ## Quickstart
