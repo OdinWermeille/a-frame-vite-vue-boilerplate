@@ -27,6 +27,7 @@
   >
 
     <a-assets @loaded="allAssetsLoaded = true">
+      <a-asset-item id="teleport-sound" response-type="arraybuffer" src="assets/teleport-sound.mp3" preload="auto"></a-asset-item>
       <!--
         Title : Magic Portal
         Source : https://sketchfab.com/3d-models/magic-portal-88a7c64fa3d3431b8cd22e8fedc71e78
@@ -94,7 +95,7 @@
       <!--
         Title : Lever
         Source : https://sketchfab.com/3d-models/lever-711403ceebb94b77a6eca5c0e631d3b6
-        Author : https://sketchfab.com/cmyer29 (cmyer29)
+        Author : https://sketchfab.com/cmyer29 (cmyer29 )
         License : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
       -->
       <a-asset-item id="lever-base" src="./assets/models/lever_base_dark.glb"></a-asset-item>
@@ -191,9 +192,11 @@
         material="color: green"
         visible="false"
       ></a-entity>
+      <a-entity id="teleport-sound-el" sound="src: #teleport-sound; on: play-sound; rolloffFactor: 0; volume: 0.8"></a-entity>
     </template>
 
     <TheCameraRig/>
+
 
   </a-scene>
 </template>

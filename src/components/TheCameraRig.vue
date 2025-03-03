@@ -4,6 +4,10 @@
   import '../aframe/simple-navmesh-constraint.js';
   import '../aframe/blink-controls.js';
   import '../aframe/physx-grab.js';
+
+  function onTeleported() {
+    document.querySelector('#teleport-sound-el').emit('play-sound');
+  }
 </script>
 
 <template>
@@ -77,6 +81,7 @@
           collisionEntities: [data-role='nav-mesh'];
           snapTurn: false;
         "
+        @teleported="onTeleported"
         position="0 1.5 0"
         physx-grab
       >
