@@ -1,5 +1,7 @@
 <script setup>
 
+import { showPortal, backgroundColor, gameEnded } from '../store/progress';
+
 import VibratingText from './VibratingText.vue';
 
 let currentTimeout;
@@ -17,7 +19,7 @@ function manageRead() {
     candleLight.setAttribute('color', '#cf00cf');
     textFront.setAttribute('visible', true);
     const leftHand = document.querySelector('#hand-left');
-    leftHand.setAttribute('blink-controls', 'curveShootingSpeed', 20); 
+    leftHand.setAttribute('blink-controls', 'curveShootingSpeed', 18.5);  
     hasRead = true;
   }
   , 9000);
@@ -53,16 +55,37 @@ function manageStopRead() {
   clearTimeout(currentTimeout);
 }
 
+const handleEndGame = () => {
+  if (gameEnded.value) return;
+  console.log('ending game');
+  const textend = document.querySelector('#text-end')
+  const textend2 = document.querySelector('#text-end-2')
+  textend.setAttribute('visible', true);
+  setTimeout(() => {
+    textend.setAttribute('visible', false);
+    textend2.setAttribute('visible', true);
+    setTimeout(() => {
+      textend2.setAttribute('visible', false);
+    }, 3000);
+  }, 3000);
+  document.querySelector('#the-moon').setAttribute('visible', false);
+  document.querySelector('#moonlight').setAttribute('visible', false);
+  document.querySelector('#ambiant-blue').setAttribute('visible', false);
+  document.querySelector('#sunlight').setAttribute('visible', true);
+  backgroundColor.value = 'color : #f0f0c0';
+  gameEnded.value = true;
+}
+
 </script>
 
 <template>
   <a-entity rotation="0 -90 0" position="0.85 -0.150 17" scale="0.2 0.2 0.2">
     <a-gltf-model src="#portal"></a-gltf-model>
-    <a-entity id="magic&light" visible="false">
+    <a-entity id="magic-light" v-if="showPortal">
       <a-gltf-model src="#portal-magic"></a-gltf-model>
-      <a-light type="point" intensity="1" position="-13.61 6.79 4.370" ></a-light>
+      <a-light type="point" intensity="1" position="-13.61 6.79 4.370" emit-when-near="distance : 1; event : endGame" @endGame="handleEndGame"></a-light>
     </a-entity>
-    <a-entity position="-13.72 6.993 12.745" rotation="-0.03 0 0">
+    <a-entity position="-12.41 7.02 -3.26" rotation="-0.03 90 0">
       <a-plane 
         id="note2" 
         height="2"
@@ -71,6 +94,7 @@ function manageStopRead() {
         @readnote2="manageRead"
         @stopreadnote2="manageStopRead">
       </a-plane>
+      <a-light type="point" intensity="0.1" position="0 -6 0"></a-light>
       <a-entity position="-0.94 0 0" scale="0.4 0.4 1">
         <a-text color="#21213d" id="text-full2" 
         value="The portal is not to be lit when not in use. 
@@ -105,11 +129,21 @@ function manageStopRead() {
   </a-entity>
 
   <a-entity
-      geometry="primitive: plane; height: 1.6; width: 2"
+      geometry="primitive: plane; height: 1.7; width: 2"
       position="0 0.04 14.3"
       rotation="-90 0 0"
       data-role="nav-mesh"
       material="color: green"
-      visible="true"
+      visible="false"
+  ></a-entity>
+
+  <a-entity
+      v-if="gameEnded"
+      geometry="primitive: plane; height: 50; width: 50"
+      position="0 0.04 14.3"
+      rotation="-90 0 0"
+      data-role="nav-mesh"
+      material="color: green"
+      visible="false"
   ></a-entity>
 </template>

@@ -21,19 +21,22 @@
         simple-navmesh-constraint="navmesh: [data-role='nav-mesh']; height: 1.65;"
         disable-in-vr="component: simple-navmesh-constraint;"
       >
-        <a-text id="text-front1" position="0 0 -0.4" scale="0.6 0.6 0.6" align="center" visible="false"
-        value="OUT
-        TELEPORT
-        OUT 
-        TELEPORT
+        <a-text id="text-front1" position="0 0 -0.4" scale="0.2 0.2 0.2" align="center" visible="false"
+        value="TELEPORT
         OUT" >
         </a-text>
-        <a-text id="text-front2" position="0 0 -0.4" scale="0.6 0.6 0.6" align="center" visible="false"
+        <a-text id="text-front2" position="0 0 -0.4" scale="0.2 0.2 0.2" align="center" visible="false"
         value="PORTAL
-        UP
-        PORTAL
-        UP
-        PORTAL" ></a-text>
+        UP" ></a-text>
+        <a-text id="text-end" position="0 0 -0.4" scale="0.2 0.2 0.2" align="center" visible="false"
+        value="You have
+        escaped,
+        well done !" ></a-text>
+        <a-text id="text-end-2" position="0 0 -0.4" scale="0.2 0.2 0.2" align="center" visible="false"
+        value="You may now
+        explore
+        outside
+        the walls" ></a-text>
         <a-entity
           geometry="primitive: circle; radius: 0.0003;"
           material="shader: flat; color: white;"
@@ -67,9 +70,9 @@
         physx-grab
       >
         <a-sphere id="hand-left-collider"
-          radius="0.02"
+          radius="0.06"
           visible="false"
-          physx-body="type: kinematic; emitCollisionEvents: true">
+          obb-collider>
         </a-sphere>
       </a-entity>
 

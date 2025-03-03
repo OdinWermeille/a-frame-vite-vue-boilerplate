@@ -1,6 +1,8 @@
 <script setup>
   import { ref } from 'vue';
 
+  import { backgroundColor } from '../store/progress.js';
+
   import TheCameraRig from './TheCameraRig.vue';
   import TheCell from './TheCell.vue';
   import ThePortal from './ThePortal.vue';
@@ -19,7 +21,7 @@
 <template>
   <a-scene
     stats
-    background="color: #030303;"
+    :background="backgroundColor"
     simple-grab
     outline
   >
@@ -144,11 +146,12 @@
           <ThePortalTower></ThePortalTower>
         </a-entity>
         <ThePortal></ThePortal>
-        <a-gltf-model src="#moon" scale="50 50 50" position="-1000 1000 -1000" rotation="30 40 20"></a-gltf-model>
-        <a-light type="spot" position="-800 800 -800" target="#directionaltarget" intensity="400">
+        <a-gltf-model id="the-moon" src="#moon" scale="50 50 50" position="-1000 1000 -1000" rotation="30 40 20"></a-gltf-model>
+        <a-light id="moonlight" type="spot" position="-800 800 -800" target="#directionaltarget" intensity="400">
           <a-entity id="directionaltarget" position="-10000 30000 -1000"></a-entity>
         </a-light>
-        <a-light type="ambient" color="#40406f" intensity="0.65"></a-light>
+        <a-light id="ambiant-blue" type="ambient" color="#40406f" intensity="0.65"></a-light>
+        <a-light id="sunlight" type="ambient" color="#ffffff" intensity="2" visible="false"></a-light>
         <TheCell></TheCell>
       </a-entity>
       
@@ -159,7 +162,7 @@
         rotation="-90 0 0"
         data-role="nav-mesh"
         material="color: green"
-        visible="true"
+        visible="false"
       ></a-entity>
 
       <a-entity
@@ -168,7 +171,7 @@
         rotation="-90 0 0"
         data-role="nav-mesh"
         material="color: green"
-        visible="true"
+        visible="false"
       ></a-entity>
 
       <a-entity
@@ -177,7 +180,7 @@
         rotation="-90 0 0"
         data-role="nav-mesh"
         material="color: green"
-        visible="true"
+        visible="false"
       ></a-entity>
       
       <a-entity
@@ -186,7 +189,7 @@
         rotation="-90 0 0"
         data-role="nav-mesh"
         material="color: green"
-        visible="true"
+        visible="false"
       ></a-entity>
     </template>
 

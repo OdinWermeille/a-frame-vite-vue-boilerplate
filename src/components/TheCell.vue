@@ -18,7 +18,8 @@ function manageRead() {
     candleLight.setAttribute('color', '#cf00cf');
     textFront.setAttribute('visible', true);
     const leftHand = document.querySelector('#hand-left');
-    leftHand.setAttribute('blink-controls', 'enable', true);  
+    leftHand.setAttribute('blink-controls', 'enable', true);
+    leftHand.setAttribute('blink-controls', 'curveShootingSpeed', 17);  
     hasRead = true;
   }
   , 7000);
@@ -61,16 +62,18 @@ function manageStopRead() {
     <a-gltf-model src="#jail" scale="0.86 0.73 0.9" rotation="0 180 0" position="-5.031 0 42.8"></a-gltf-model>
     <a-box position="0.1 1.984 26.02" depth="2.500" height="0.1" width="2.4" color="#393939"></a-box>
     <a-gltf-model src="#one-wall" scale="0.01 0.01 0.01" rotation="0 180 0" position="-4.063 0 24.787"></a-gltf-model>
-    <a-entity 
-      position="-0.69 0.47 26.45"
-      listen-to__start="target : #note1; event : readnote1; emit : readnote1"
-      listen-to__stop="target : #note1; event : stopreadnote1; emit : stopreadnote1"
-      @readnote1="manageRead"
-      @stopreadnote1="manageStopRead"
-      simple-grab>
-      <a-gltf-model id="purple-cell-candle" src="#purple-candle" scale="25 25 25" visible="false"></a-gltf-model>
-      <a-gltf-model id="cell-candle" src="#candle" scale="25 25 25" clickable outline-on-event @click="$event.target.removeAttribute('clickable')"></a-gltf-model>
-      <BaseCandleLight id="candlelight" :from="0.05" :to="0.1" position="0.007 0.218 0"></BaseCandleLight>
+    <a-entity rotation="90 45 0" position="-0.69 0.428 26.45" simple-grab>
+      <a-entity 
+        rotation="170 90 -90"
+        position="0.065 -0.065 -0.042"
+        listen-to__start="target : #note1; event : readnote1; emit : readnote1"
+        listen-to__stop="target : #note1; event : stopreadnote1; emit : stopreadnote1"
+        @readnote1="manageRead"
+        @stopreadnote1="manageStopRead">
+        <a-gltf-model id="purple-cell-candle" src="#purple-candle" scale="25 25 25" visible="false"></a-gltf-model>
+        <a-gltf-model id="cell-candle" src="#candle" scale="25 25 25" clickable outline-on-event @click="$event.target.removeAttribute('clickable')"></a-gltf-model>
+        <BaseCandleLight id="candlelight" :from="0.05" :to="0.1" position="0.007 0.218 0"></BaseCandleLight>
+      </a-entity>
     </a-entity>
     <a-entity rotation="-90 0 -90" scale="0.8 0.4 1" position="0.9 0.467 26">
       <a-plane 
@@ -115,6 +118,6 @@ function manageStopRead() {
       rotation="-90 0 0"
       data-role="nav-mesh"
       material="color: green"
-      visible="true"
+      visible="false"
   ></a-entity>
 </template>
