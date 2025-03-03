@@ -13,7 +13,20 @@
       document.querySelector('a-scene').enterVR();
     }
     document.querySelector('a-scene').emit('enter-scene');
+    //as the intro is part of the scene, I opted to start it here
+    startIntro();
   }
+
+  const startIntro = () => {
+    setTimeout(() => {
+      document.getElementById('intro-text').setAttribute('visible', false);
+      document.getElementById('intro-text-2').setAttribute('visible', true);
+      setTimeout(() => {
+        document.getElementById('intro').setAttribute('visible', false);
+      }, 3000);
+    }, 3000);
+  };
+
 </script>
 
 <template>

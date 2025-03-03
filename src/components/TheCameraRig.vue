@@ -37,6 +37,17 @@
         explore
         outside
         the walls" ></a-text>
+        <a-entity id="intro" position="0 0 -0.2">
+          <a-plane color="#000000" position="0 0 -0.1"></a-plane>
+          <a-text scale="0.2 0.2 0.2" id="intro-text" align="center"
+          value="You are an 
+          amnesiac 
+          wizard."></a-text>
+          <a-text scale="0.2 0.2 0.2" id="intro-text-2" align="center" visible="false"
+          value="Try to
+          remember
+          your spells."></a-text>
+        </a-entity>
         <a-entity
           geometry="primitive: circle; radius: 0.0003;"
           material="shader: flat; color: white;"
