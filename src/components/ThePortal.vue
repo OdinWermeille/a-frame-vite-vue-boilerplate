@@ -94,7 +94,7 @@ const handleEndGame = () => {
         @readnote2="manageRead"
         @stopreadnote2="manageStopRead">
       </a-plane>
-      <a-light type="point" intensity="0.1" position="0 -6 0"></a-light>
+      <a-light type="point" intensity="0.2" position="0 -6 0"></a-light>
       <a-entity position="-0.94 0 0" scale="0.4 0.4 1">
         <a-text color="#21213d" id="text-full2" 
         value="The portal is not to be lit when not in use. 
