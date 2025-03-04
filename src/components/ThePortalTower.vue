@@ -1,10 +1,18 @@
 <script setup>
-    import { showPortal } from '../store/progress';
+    import { showPortal, portalBrightness } from '../store/progress';
 
     import BaseCandleLight from './BaseCandleLight.vue';
 
     const openPortal = () => {
         showPortal.value = true;
+    }
+
+    const lowerBrightness = () => {
+        portalBrightness.value = 1;
+    }
+
+    const increaseBrightness = () => {
+        portalBrightness.value = 2;
     }
 </script>
 
@@ -19,11 +27,14 @@
         <a-gltf-model src="#lever-arm" scale="0.5 0.5 0.5" rotation="-60 -43.3 0" position="10.6 13.79 2.08" obb-collider animation="property: rotation; to : 60 -43.3 0; startEvents : obbcollisionstarted" @animationcomplete="openPortal"></a-gltf-model>
     </a-entity>
     <a-entity
-      geometry="primitive: circle; radius: 0.9"
-      position="11.5 13.63 2.8"
-      rotation="-90 0 0"
-      data-role="nav-mesh"
-      material="color: green"
-      visible="false"
+        geometry="primitive: circle; radius: 0.9"
+        position="11.5 13.63 2.8"
+        rotation="-90 0 0"
+        data-role="nav-mesh"
+        material="color: green"
+        visible="false"
+        emit-when-near="target: #head; distance: 3; event: increaseBrightness; eventFar: lowerBrightness"
+        @increaseBrightness="increaseBrightness"
+        @lowerBrightness="lowerBrightness"
     ></a-entity>
 </template>

@@ -1,6 +1,6 @@
 <script setup>
 
-import { showPortal, backgroundColor, gameEnded } from '../store/progress';
+import { showPortal, backgroundColor, gameEnded, portalBrightness } from '../store/progress';
 
 import VibratingText from './VibratingText.vue';
 
@@ -83,7 +83,7 @@ const handleEndGame = () => {
     <a-gltf-model src="#portal"></a-gltf-model>
     <a-entity id="magic-light" v-if="showPortal">
       <a-gltf-model src="#portal-magic"></a-gltf-model>
-      <a-light type="point" intensity="1" position="-13.61 6.79 4.370" emit-when-near="distance : 1; event : endGame" @endGame="handleEndGame"></a-light>
+      <a-light type="point" :intensity="portalBrightness" position="-13.61 6.79 4.370" emit-when-near="distance : 1; event : endGame" @endGame="handleEndGame"></a-light>
     </a-entity>
     <a-entity position="-12.41 7.02 -3.26" rotation="-0.03 90 0">
       <a-plane 
