@@ -23,7 +23,7 @@
       document.getElementById('intro-text-2').setAttribute('visible', true);
       setTimeout(() => {
         document.getElementById('intro').setAttribute('visible', false);
-      }, 3000);
+      }, 5000);
     }, 3000);
   };
 

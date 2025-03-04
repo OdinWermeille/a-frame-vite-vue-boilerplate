@@ -11,7 +11,7 @@
 
   watchEffect(() => {
     if (!props.loaded) return;
-    setTimeout(() => {showBtn.value = true}, 4000);
+    setTimeout(() => {showBtn.value = true}, 1000);
   });
 
   function enterScene() {
