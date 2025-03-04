@@ -45,7 +45,7 @@
           <a-plane color="#000000" position="0 0 -0.01"></a-plane>
           <a-text scale="0.1 0.1 0.1" id="intro-text" align="center"
           value="You are an 
-          amnesiac 
+          amnesic 
           wizard."></a-text>
           <a-text scale="0.1 0.1 0.1" id="intro-text-2" align="center" visible="false"
           value="Try to

@@ -1,7 +1,7 @@
 <p align="center">
     <img src="./logo.svg" alt="VAV Logo" align="center"/>
 </p>
-<h1 align="center">Amnesiac Wizard</h1>
+<h1 align="center">Amnesic Wizard</h1>
 
 > A project built using A-Frame 1.7, Vue 3.5 and Vite 5.4
 

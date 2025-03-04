@@ -27,7 +27,7 @@
 <template>
   <div id="onboarding" v-if="showOnboarding">
     <div>
-      <h1>Amnesiac Wizard</h1>
+      <h1>Amnesic Wizard</h1>
       <p v-if="!showBtn">loading...</p>
       <button v-if="showBtn" @click="enterScene()">Enter scene</button>
       <div class="licences">
