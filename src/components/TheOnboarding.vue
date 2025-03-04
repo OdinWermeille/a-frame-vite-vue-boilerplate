@@ -137,6 +137,13 @@
             under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
           </dd>
 
+          <dt>
+            <a href="https://pixabay.com/fr/sound-effects/energy-90321/" target="_blank">Teleport Sound</a>
+          </dt><dd>
+            by <a href="https://pixabay.com/sound-effects/energy-90321/" target="_blank">Leszek_Szary (Freesound)</a>
+            under <a href="https://pixabay.com/service/license-summary/" target="_blank">Pixabay Content License</a>
+          </dd>
+
         </dl>
       </div>
     </div>

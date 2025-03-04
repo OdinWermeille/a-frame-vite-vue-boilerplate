@@ -105,11 +105,17 @@
       <!--
         Title : Lever
         Source : https://sketchfab.com/3d-models/lever-711403ceebb94b77a6eca5c0e631d3b6
-        Author : https://sketchfab.com/cmyer29 (cmyer29 )
+        Author : https://sketchfab.com/cmyer29 (cmyer29)
         License : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
       -->
       <a-asset-item id="lever-base" src="./assets/models/lever_base_dark.glb"></a-asset-item>
       <a-asset-item id="lever-arm" src="./assets/models/lever_arm_dark.glb"></a-asset-item>
+      <!--
+        Title : energy
+        Source : https://pixabay.com/fr/sound-effects/energy-90321/
+        Author : https://pixabay.com/fr/users/freesound_community-46691455/ (Leszek_Szary)
+        License : Pixabay Content License (https://pixabay.com/service/license-summary/)
+      -->
       <a-asset-item id="teleport-sound" response-type="arraybuffer" src="assets/teleport-sound.mp3" preload="auto"></a-asset-item>
     </a-assets>
 
