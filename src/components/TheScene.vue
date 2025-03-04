@@ -14,7 +14,6 @@
   import '../aframe/emit-when-near.js';
   import '../aframe/listen-to.js';
   import '../aframe/outline.js';
-
   const allAssetsLoaded = ref(false);
 
   const startIntro = () => {
@@ -23,9 +22,8 @@
       document.getElementById('intro-text-2').setAttribute('visible', true);
       setTimeout(() => {
         document.getElementById('intro').setAttribute('visible', false);
-        document.getElementById('hand-left').setAttribute('visible', true);
-        document.getElementById('hand-right').setAttribute('visible', true);
-      }, 5000);
+        document.getElementById('hands-container').setAttribute('position', '0 0 0');
+      }, 3000);
     }, 3000);
   };
 
