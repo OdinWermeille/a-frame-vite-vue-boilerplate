@@ -51,6 +51,8 @@
           value="Try to
           remember
           your spells."></a-text>
+          <!-- a second plane behind the player to protect the first plane from the light -->
+          <a-plane color="#000000" position="0 0 0.21"></a-plane>
         </a-entity>
         <a-entity
           geometry="primitive: circle; radius: 0.0003;"
@@ -71,42 +73,42 @@
         ></a-entity>
       </a-entity>
 
-      <a-entity
-        id="hand-left"
-        hand-controls="hand: left"
-        blink-controls="
-          enable: false;
-          cameraRig: #camera-rig;
-          teleportOrigin: #head;
-          collisionEntities: [data-role='nav-mesh'];
-          snapTurn: false;
-        "
-        @teleported="onTeleported"
-        position="0 1.5 0"
-        physx-grab
-        visible="false"
-      >
-        <a-sphere id="hand-left-collider"
-          radius="0.06"
-          visible="false"
-          obb-collider>
-        </a-sphere>
-      </a-entity>
+      <a-entity id="hands-container" position="0 -100 0">
+        <a-entity
+          id="hand-left"
+          hand-controls="hand: left"
+          blink-controls="
+            enable: false;
+            cameraRig: #camera-rig;
+            teleportOrigin: #head;
+            collisionEntities: [data-role='nav-mesh'];
+            snapTurn: false;
+          "
+          @teleported="onTeleported"
+          position="0 1.5 0"
+          physx-grab
+        >
+          <a-sphere id="hand-left-collider"
+            radius="0.06"
+            visible="false"
+            obb-collider>
+          </a-sphere>
+        </a-entity>
 
-      <a-entity
-        id="hand-right"
-        hand-controls="hand: right"
-        laser-controls="hand: right"
-        raycaster="far: 4; objects: [clickable]; showLine: true;"
-        position="0 1.5 0"
-        physx-grab
-        visible="false"
-      >
-        <a-sphere id="hand-right-collider"
-          radius="0.02"
-          visible="false"
-          physx-body="type: kinematic; emitCollisionEvents: true">
-        </a-sphere>
+        <a-entity
+          id="hand-right"
+          hand-controls="hand: right"
+          laser-controls="hand: right"
+          raycaster="far: 4; objects: [clickable]; showLine: true;"
+          position="0 1.5 0"
+          physx-grab
+        >
+          <a-sphere id="hand-right-collider"
+            radius="0.02"
+            visible="false"
+            physx-body="type: kinematic; emitCollisionEvents: true">
+          </a-sphere>
+        </a-entity>
       </a-entity>
 
   </a-entity>
