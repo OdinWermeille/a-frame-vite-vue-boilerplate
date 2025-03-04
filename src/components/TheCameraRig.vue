@@ -84,6 +84,7 @@
         @teleported="onTeleported"
         position="0 1.5 0"
         physx-grab
+        visible="false"
       >
         <a-sphere id="hand-left-collider"
           radius="0.06"
@@ -99,6 +100,7 @@
         raycaster="far: 4; objects: [clickable]; showLine: true;"
         position="0 1.5 0"
         physx-grab
+        visible="false"
       >
         <a-sphere id="hand-right-collider"
           radius="0.02"

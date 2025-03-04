@@ -23,6 +23,8 @@
       document.getElementById('intro-text-2').setAttribute('visible', true);
       setTimeout(() => {
         document.getElementById('intro').setAttribute('visible', false);
+        document.getElementById('hand-left').setAttribute('visible', true);
+        document.getElementById('hand-right').setAttribute('visible', true);
       }, 5000);
     }, 3000);
   };
